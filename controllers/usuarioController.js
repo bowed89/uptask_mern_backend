@@ -17,7 +17,11 @@ const registrar = async (req, res) => {
     try {
         const usuario = new Usuario(req.body)
         usuario.token = generarId()
+        
+        //agregado
         usuario.confirmado = true
+        usuarioConfirmar.token = ""
+
         await usuario.save()
 
         // Enviar el email de confirmacion
