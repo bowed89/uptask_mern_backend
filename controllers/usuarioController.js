@@ -20,7 +20,7 @@ const registrar = async (req, res) => {
         
         //agregado
         usuario.confirmado = true
-        usuarioConfirmar.token = ""
+        usuario.token = ""
 
         await usuario.save()
 
